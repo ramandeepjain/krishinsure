@@ -1,0 +1,2 @@
+.panel{background:var(--color-panel); border-radius:16px; padding:28px; text-align:center; box-shadow:var(--shadow-soft)}
+.panel h3{margin:0 0 8px}

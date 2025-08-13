@@ -1,0 +1,6 @@
+.wrap{background:linear-gradient(180deg, var(--color-teal-900) 0%, var(--color-teal-800) 100%); color:white}
+.panel{background:transparent; border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:28px}
+.sub{color:rgba(255,255,255,0.8); margin:0 0 16px}
+.form{display:grid; grid-template-columns:1fr auto; gap:12px}
+.input{height:46px; border-radius:12px; border:1px solid rgba(255,255,255,0.15); padding:0 14px; font-size:16px; background:rgba(255,255,255,0.08); color:white}
+@media (max-width:700px){.form{grid-template-columns:1fr}}

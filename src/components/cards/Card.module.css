@@ -1,0 +1,5 @@
+.card{background:white; border-radius:14px; box-shadow:var(--shadow-soft); padding:22px; display:flex; gap:16px; align-items:center; justify-content:space-between; min-height:110px}
+.card:hover{box-shadow:var(--shadow-hover); transform:translateY(-2px)}
+.card h3{margin:0 0 4px; font-size:18px; line-height:26px}
+.card p{margin:0; font-size:14px; opacity:.8}
+.thumb{width:54px; height:54px; border-radius:12px; background:var(--color-panel); display:grid; place-items:center}

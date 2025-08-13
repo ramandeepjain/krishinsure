@@ -1,0 +1,64 @@
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+    background:
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-teal-800) 100%, transparent) 0%,
+            color-mix(in srgb, var(--color-teal-700) 82%, transparent) 100%
+        ),
+        url("../../assets/subtle-prism.svg");
+    background-size: cover, 60px 60px;
+    background-repeat: no-repeat, repeat;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* so animations stack vertically */
+    justify-content: center;
+}
+
+/* p appears first */
+.sub {
+    opacity: 0;
+    max-width: 720px;
+    margin: 0 auto 24px;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0s; /* first */
+    font-size: 22px;
+}
+
+/* buttons row appears second */
+.row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 16px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.4s; /* second */
+}
+
+/* h1 appears last */
+.hero h1 {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: 0.8s; /* last */
+}
+
+@media (max-width:700px) {
+    .hero {
+        min-height: 100vh;
+        padding: 0;
+    }
+}

@@ -1,0 +1,6 @@
+.steps{display:grid; gap:18px}
+.step{display:grid; grid-template-columns:64px 1fr; align-items:center; gap:16px; background:white; border-radius:14px; padding:16px; box-shadow:var(--shadow-soft)}
+.icon{width:64px; height:44px; border-radius:10px; display:grid; place-items:center; background:var(--color-teal-900); color:white}
+.step h4{margin:0 0 4px; font-size:18px}
+.step p{margin:0; font-size:14px; opacity:.85}
+@media (max-width:700px){.step{grid-template-columns:48px 1fr}}

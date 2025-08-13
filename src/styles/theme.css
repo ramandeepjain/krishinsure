@@ -1,0 +1,38 @@
+:root{
+  --color-bg: #FFFFFF;
+  --color-panel: #F5F7F8;
+  --color-ink: #0F2D36;
+  --color-teal-900: #0b8377; /* header/footer */
+  --color-teal-800: #1d8375;
+  --color-teal-700: #26bc98; /* primary */
+  --color-teal-600: #bdd7d4; /* hover */
+  --color-accent: #FFA630; /* highlights */
+  --color-border: #E3E8EA;
+  --maxw: 1200px;
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-hover: 0 10px 30px rgba(0,0,0,0.10);
+}
+*{box-sizing:border-box}
+html, body, #root{height:100%}
+body{margin:0; background:var(--color-bg); color:var(--color-ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+
+/* layout helpers */
+.container{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+.section{padding:72px 0}
+.section.tight{padding:48px 0}
+
+h1,h2,h3{font-family:Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing:-0.02em; margin:0 0 16px}
+h1{font-size:44px; line-height:56px}
+h2{font-size:32px; line-height:42px}
+h3{font-size:24px; line-height:32px}
+p{margin:0 0 12px}
+
+@media (max-width: 700px){
+  h1{font-size:36px; line-height:46px}
+}
