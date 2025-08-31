@@ -12,10 +12,10 @@ export default function App(){
     <>
       <Navbar/>
       <Hero/>
-      {/* <Features/>
+      {/* <Features/> */}
       <HowItWorks/>
       <CTAPanel/>
-      <Newsletter/> */}
+      {/* <Newsletter/> */}
       <Footer/>
     </>
   )

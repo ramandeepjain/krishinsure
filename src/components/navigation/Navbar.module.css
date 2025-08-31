@@ -25,10 +25,10 @@
 }
 
 .logo {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: var(--color-accent)
+    width: 30px;
+    height: 30px;
+    /* border-radius: 8px; */
+    /* background: var(--color-accent) */
 }
 
 .nav {

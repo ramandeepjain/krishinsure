@@ -16,12 +16,17 @@ export default function Navbar(){
         <Container>
           <div className={styles.inner}>
             <a className={styles.brand} href="#home" aria-label="Home">
-              <span className={styles.logo} />
+              {/* <span className={styles.logo} /> */}
+              <img
+                src="../../src/assets/logo_single_color.png"   // <-- replace with your logo path
+                // alt="Krishinsure Logo"
+                className={styles.logo}
+              />
               <span>Krishinsure</span>
             </a>
             <nav className={styles.nav} aria-label="Primary">
-              <a href="#home">Services</a>
-              <a href="#home">NRIs</a>
+              {/* <a href="#home">Services</a>
+              <a href="#home">NRIs</a> */}
               {/* <a href="#pricing">Pricing</a> */}
               <Button kind="light" as="a" href="tel:+919988528392">Talk to our experts</Button>
             </nav>

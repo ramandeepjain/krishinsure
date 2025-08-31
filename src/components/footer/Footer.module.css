@@ -1,6 +1,34 @@
-.footer{background:var(--color-teal-900); color:#cfe3ea}
-.footer a{color:#eaf6fb}
-.cols{display:grid; grid-template-columns:1fr auto; gap:24px; align-items:start}
-.brand{display:flex; align-items:center; gap:10px; font-weight:700; margin-bottom:8px}
-.logo{width:28px; height:28px; border-radius:8px; background:var(--color-accent)}
-.small{font-size:14px}
+.footer {
+    background: var(--color-teal-900);
+    color: #cfe3ea
+}
+
+.footer a {
+    color: #eaf6fb
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: start
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    margin-bottom: 8px
+}
+
+.logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    /* background: var(--color-accent) */
+}
+
+.small {
+    font-size: 14px
+}

@@ -1,2 +1,11 @@
-.panel{background:var(--color-panel); border-radius:16px; padding:28px; text-align:center; box-shadow:var(--shadow-soft)}
-.panel h3{margin:0 0 8px}
+.panel {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 40px
+}

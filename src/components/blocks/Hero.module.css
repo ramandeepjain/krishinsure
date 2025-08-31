@@ -1,64 +1,82 @@
+/* Smooth fade/slide-in for elements */
 @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-.hero {
-    background:
-        linear-gradient(
-            180deg,
-            color-mix(in srgb, var(--color-teal-800) 100%, transparent) 0%,
-            color-mix(in srgb, var(--color-teal-700) 82%, transparent) 100%
-        ),
-        url("../../assets/subtle-prism.svg");
-    background-size: cover, 60px 60px;
-    background-repeat: no-repeat, repeat;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column; /* so animations stack vertically */
-    justify-content: center;
+/* Logo appears first */
+.logo {
+  display: inline-block;
+  opacity: 0;
+  margin: 0 auto 16px;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0s; /* first */
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
 }
 
-/* p appears first */
+/* Subheading appears second */
 .sub {
-    opacity: 0;
-    max-width: 720px;
-    margin: 0 auto 24px;
-    animation: fadeUp 0.6s ease forwards;
-    animation-delay: 0s; /* first */
-    font-size: 22px;
+  opacity: 0;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.2s; /* second */
+  font-size: 22px;
 }
 
-/* buttons row appears second */
+/* Buttons row appears third */
 .row {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin-top: 16px;
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
-    animation-delay: 0.4s; /* second */
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.4s; /* third */
 }
 
-/* h1 appears last */
+/* Heading appears last */
 .hero h1 {
-    opacity: 0;
-    animation: fadeUp 0.6s ease forwards;
-    animation-delay: 0.8s; /* last */
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: 0.8s; /* last */
+}
+
+/* Optional: reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .logo,
+  .sub,
+  .row,
+  .hero h1 {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Existing styles (unchanged) */
+.hero {
+  background:
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--color-teal-800) 100%, transparent) 0%,
+      color-mix(in srgb, var(--color-teal-700) 82%, transparent) 100%
+    ),
+    url("../../assets/subtle-prism.svg");
+  background-size: cover, 60px 60px;
+  background-repeat: no-repeat, repeat;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width:700px) {
-    .hero {
-        min-height: 100vh;
-        padding: 0;
-    }
+  .hero {
+    min-height: 100vh;
+    padding: 0;
+  }
 }
